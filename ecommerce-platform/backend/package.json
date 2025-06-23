@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "E-commerce platform backend",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx cross-env NODE_ENV=development nodemon server.js",
+    "test": "npx cross-env NODE_ENV=test jest --testTimeout=10000 --detectOpenHandles"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^8.0.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "cross-env": "^7.0.3",
+    "jest": "^30.0.2",
+    "supertest": "^7.1.1",
+    "nodemon": "^3.1.10"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "author": "Jules",
+  "license": "ISC"
+}
